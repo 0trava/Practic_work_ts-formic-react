@@ -1,3 +1,10 @@
-# Sun-energy
+# React + TypeScript + Vite
 
-it's will be web sity for my company were I work 
+~~~
+npm create vite
+npm i
+
+npm run dev
+~~~
+
+
