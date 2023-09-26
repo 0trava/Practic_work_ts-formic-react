@@ -12,8 +12,8 @@ type FormData = {
   city: string,
   state: string,
   zip: string,
-  email: "",
-  password: "",
+  email: string,
+  password: string,
 }
 
 const INITIAL_DATA: FormData = {
