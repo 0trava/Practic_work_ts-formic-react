@@ -1,3 +1,6 @@
+import { AccountForm } from "./AccountForm"
+import { AddressForm } from "./AddressForm"
+import { UserForm } from "./UserForm"
 import { useMultistepForm } from "./useMultistepForm"
 
 function App() {
@@ -8,7 +11,8 @@ function App() {
     isFirstStep,
     back,
     next,
-  } = useMultistepForm([<div>One</div>,<div>Two</div>])
+    isLastStep,
+  } = useMultistepForm([<UserForm/>, <AddressForm/>, <AccountForm/>])
 
 
 
@@ -41,9 +45,13 @@ function App() {
         gap: ".5rem",
         justifyContent: "flex-end",
       }}>
+        {/* BUTTONS */}
         {!isFirstStep && <button type="button" onClick={back}>Back</button>}
         
-        <button  type="button" onClick={next}>Next</button>
+        <button type="button" onClick={next}>
+          {isLastStep ? "Finish" : "Next"}
+          </button>
+
       </div>
     </form>
       
