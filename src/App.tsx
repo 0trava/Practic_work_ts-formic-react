@@ -67,7 +67,7 @@ function App() {
        <h3>Address details</h3>
     </li>
     <li>
-       <div>2</div>
+       <div>3</div>
        <h3>Account details</h3>
     </li>
     </ul>
