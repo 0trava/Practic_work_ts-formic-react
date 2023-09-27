@@ -17,10 +17,11 @@ export function FormWrapper ({title, children}: FormWrapperProps) {
         </h2>
 
         <div style={{
-            display: "grid",
-            gap: "1rem .5rem",
+            // display: "grid",
+            gap: ".5rem .5rem",
             justifyContent: "flex-start",
-            gridTemplateColumns: "auto minmax(auto, 400px)",
+            display: "flex",
+            // gridTemplateColumns: "auto minmax(auto, 400px)",
         }}>{children}</div>
     </>
 }

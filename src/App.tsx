@@ -53,6 +53,7 @@ function App() {
 
   // Style
   const className: string = styles.title;
+  const form: string = styles.form;
 
   return (
     <>
@@ -75,16 +76,7 @@ function App() {
 
     {/* FORMA */}
     <div
-      style={{
-        position: "relative",
-        background: "white",
-        border: "1px solid black",
-        padding: "2rem",
-        margin: "1rem",
-        borderRadius: ".5rem",
-        fontFamily: "Arial",
-        maxWidth: "max-content",
-      }}
+      className={form}
     >
 
       <form action="" onSubmit={onSubmite}>
@@ -97,6 +89,8 @@ function App() {
         >
           {currentStepIndex + 1}/ {steps.length}
         </div>
+
+
         {step}
         <div
           style={{
@@ -106,7 +100,11 @@ function App() {
             justifyContent: "flex-end",
           }}
         >
+
+
+        </div>
           {/* BUTTONS */}
+          <div>
           {!isFirstStep && (
             <button type="button" onClick={back}>
               Back
@@ -114,7 +112,7 @@ function App() {
           )}
 
           <button type="submit">{isLastStep ? "Finish" : "Next"}</button>
-        </div>
+          </div>
       </form>
     </div>
     </>
