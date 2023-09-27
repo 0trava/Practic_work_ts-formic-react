@@ -21,6 +21,7 @@ export function FormWrapper ({title, children}: FormWrapperProps) {
             gap: ".5rem .5rem",
             justifyContent: "flex-start",
             display: "flex",
+            flexDirection: "column",
             // gridTemplateColumns: "auto minmax(auto, 400px)",
         }}>{children}</div>
     </>
