@@ -17,7 +17,10 @@ export function UserForm({
   updateFields,
 }: UserFormProps) {
   return (
+    <>
     <FormWrapper title="User Details">
+       
+
       <label htmlFor="">First name</label>
       <input
         type="text"
@@ -42,5 +45,7 @@ export function UserForm({
         onChange={(e) => updateFields({ age: e.target.value })}
       />
     </FormWrapper>
+    </>
+    
   );
 }
