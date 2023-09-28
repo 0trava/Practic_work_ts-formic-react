@@ -1,4 +1,5 @@
 import { FormWrapper } from "./FormWrapper";
+import styles from  './App.module.scss';
 
 type AccountData = {
   email: string;
@@ -14,9 +15,18 @@ export function AccountForm({
   password,
   updateFields,
 }: AccountFormProps) {
+
+  // Style
+  const inputGroup: string = styles.inputGroup;
+
+
+
+
+
   return (
     <FormWrapper title="Account Creating">
-      <label htmlFor="">Email</label>
+      <div className={inputGroup}>
+      
       <input
         type="email"
         autoFocus
@@ -24,13 +34,19 @@ export function AccountForm({
         value={email}
         onChange={(e) => updateFields({ email: e.target.value })}
       />
-      <label htmlFor="">Password</label>
+      <label htmlFor="">Email</label>
+      </div>
+
+      <div className={inputGroup}>
+      
       <input
         type="password"
         required
         value={password}
         onChange={(e) => updateFields({ password: e.target.value })}
       />
+      <label htmlFor="">Password</label>
+      </div>
     </FormWrapper>
   );
 }

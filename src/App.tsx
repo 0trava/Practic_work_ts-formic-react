@@ -54,6 +54,7 @@ function App() {
   // Style
   const className: string = styles.title;
   const form: string = styles.form;
+  const buttonbox: string = styles.buttonbox;
 
   return (
     <>
@@ -80,7 +81,7 @@ function App() {
     >
 
       <form action="" onSubmit={onSubmite}>
-        <div
+        {/* <div
           style={{
             position: "absolute",
             top: ".5rem",
@@ -88,7 +89,7 @@ function App() {
           }}
         >
           {currentStepIndex + 1}/ {steps.length}
-        </div>
+        </div> */}
 
 
         {step}
@@ -104,7 +105,7 @@ function App() {
 
         </div>
           {/* BUTTONS */}
-          <div>
+          <div className={buttonbox}>
           {!isFirstStep && (
             <button type="button" onClick={back}>
               Back

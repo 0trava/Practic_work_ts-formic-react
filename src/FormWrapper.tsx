@@ -8,21 +8,17 @@ type FormWrapperProps = {
 
 export function FormWrapper ({title, children}: FormWrapperProps) {
     return <>
-        <h2 style={{
-            textAlign: "center",
-            margin: 0,
-            marginBottom: "2rem"
-        }}>
-            {title}
-        </h2>
+        <div>
+        <h2>{title}</h2>
 
         <div style={{
             // display: "grid",
-            gap: ".5rem .5rem",
+            gap: ".8rem .5rem",
             justifyContent: "flex-start",
             display: "flex",
             flexDirection: "column",
             // gridTemplateColumns: "auto minmax(auto, 400px)",
         }}>{children}</div>
+        </div>
     </>
 }
