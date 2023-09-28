@@ -30,6 +30,7 @@ export function AddressForm({
           autoFocus
           required
           value={street}
+          pattern="^(?=\S*\s)(?=[^a-zA-Z]*[a-zA-Z])"
           onChange={(e) => updateFields({ street: e.target.value })}
         />
         <label htmlFor="">Street</label>

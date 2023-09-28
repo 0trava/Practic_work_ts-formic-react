@@ -5,7 +5,7 @@ import { UserForm } from "./UserForm";
 import { useMultistepForm } from "./useMultistepForm";
 import styles from  './App.module.scss';
 
-type FormData = {
+type Values = {
   firstName: string;
   lastName: string;
   age: string;
@@ -17,7 +17,7 @@ type FormData = {
   password: string;
 };
 
-const INITIAL_DATA: FormData = {
+const INITIAL_DATA: Values = {
   firstName: "",
   lastName: "",
   age: "",
@@ -29,6 +29,8 @@ const INITIAL_DATA: FormData = {
   password: "",
 };
 
+
+
 function App() {
   const [data, setData] = useState(INITIAL_DATA);
   const { steps, currentStepIndex, step, isFirstStep, back, next, isLastStep } =
@@ -39,7 +41,7 @@ function App() {
     ]);
 
   // Update data
-  function updateFields(fields: Partial<FormData>) {
+  function updateFields(fields: Partial<Values>) {
     setData((prev) => {
       return { ...prev, ...fields };
     });

@@ -11,6 +11,7 @@ type UserFormProps = UserData & {
   updateFields: (fields: Partial<UserData>) => void;
 };
 
+
 export function UserForm({
   firstName,
   lastName,
@@ -30,6 +31,8 @@ export function UserForm({
         autoFocus
         required
         value={firstName}
+        name="firstName"
+        pattern="[A-Za-z]+"
         onChange={(e) => updateFields({ firstName: e.target.value })}/>
          <label htmlFor="">First name</label>
      </div>
@@ -39,6 +42,8 @@ export function UserForm({
         type="text"
         required
         value={lastName}
+        name="lastName"
+        pattern="[A-Za-z]+"
         onChange={(e) => updateFields({ lastName: e.target.value })}
       />
       <label htmlFor="">Last name</label>
@@ -49,14 +54,15 @@ export function UserForm({
       <input
         type="number"
         min={1}
+        max={99}
         required
         value={age}
+        pattern="[1-9]+"
         onChange={(e) => updateFields({ age: e.target.value })}
       />
       <label htmlFor="">Age</label>
       </div>
     </FormWrapper>
     </>
-    
   );
 }
