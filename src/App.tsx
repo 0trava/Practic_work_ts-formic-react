@@ -55,21 +55,43 @@ function App() {
   const className: string = styles.title;
   const form: string = styles.form;
   const buttonbox: string = styles.buttonbox;
+  const green: string = styles.green;
+  const white: string = styles.white;
+  const linegreen: string = styles.linegreen;
+  
+
+  function chackIndex (e:number): string {
+    if (currentStepIndex + 1 >= e) {
+      return green
+    } else {
+        return white
+      }
+  }
+
+  function chackLineIndex (e:number): string {
+    if (currentStepIndex + 1 >= e) {
+      return linegreen
+    } else {
+        return ""
+      }
+  }
 
   return (
     <>
     {/* Block whits steps */}
     <ul>
     <li>
-      <div>1</div>
+      <div className={chackIndex(1)}>1</div>
+      <p className={chackLineIndex(2)}>______</p>
       <h3>User details</h3>
     </li>
     <li>
-       <div>2</div>
+       <div className={chackIndex(2)}>2</div>
+       <p className={chackLineIndex(3)}>______</p>
        <h3>Address details</h3>
     </li>
     <li>
-       <div>3</div>
+       <div className={chackIndex(3)}>3</div>
        <h3>Account details</h3>
     </li>
     </ul>

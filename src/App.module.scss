@@ -103,6 +103,7 @@ li{
   justify-content: center;
   align-items: center;
   z-index: 1;
+  position: relative;
   
   
   margin: 0;
@@ -110,36 +111,10 @@ li{
   text-align: center;
 }
 
-ul::before{
-  
-  content: "";
-  position: absolute;
-  z-index: 0;
-  width: 110px;
-  height: 4px;
-  background-color: rgb(255, 255, 255);
-  top: 9px;
-  left: 110px;
-  
 
-}
-
-ul::after{
-  
-  content: "";
-  position: absolute;
-  z-index: 0;
-  width: 130px;
-  height: 4px;
-  background-color: rgb(255, 255, 255);
-  top: 9px;
-  left: 230px;
-  
-
-}
 
 li div {
-  background-color: white;
+
   width: 20px;
   height: 20px;
   border-radius: 5px;
@@ -153,9 +128,21 @@ li div {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  color: dimgray;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
+
+.green {
+  background-color: #23c483;
+  color: white;
+}
+
+
+
+.white{
+  background-color: white;
+  color: dimgray;
+}
+
 
 li h3 {
   color: rgb(255, 255, 255);
@@ -169,6 +156,22 @@ li h3 {
   line-height: normal;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
+
+li p {
+  position: absolute;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 900;
+  top: -50px;
+  left: 50px;
+  z-index: -1;
+}
+
+.linegreen {
+  color: #23c483;
+}
+
+
 
 .form {
   background-color: #ffffff;
